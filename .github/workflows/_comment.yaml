@@ -13,3 +13,5 @@ jobs:
             ref: prod
       - run: |
           echo ${{ vars.DATA }}
+          echo ${{ github.event.sender.login }}
+          echo ${{ toJson(github) }}
