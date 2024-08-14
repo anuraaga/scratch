@@ -8,10 +8,5 @@ jobs:
   apply:
     runs-on: ubuntu-latest
 
-    environment: prod
     steps:
-      - uses: actions/checkout@v4
-        with:
-            ref: prod
-      - run: |
-          echo ${{ vars.DATA }}
+      - run: gh -R anuraaga/scratch workflow run _comment.yaml -r prod

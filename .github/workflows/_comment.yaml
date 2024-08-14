@@ -1,0 +1,15 @@
+name: Label
+on:
+  workflow_dispatch:
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+
+    environment: prod
+    steps:
+      - uses: actions/checkout@v4
+        with:
+            ref: prod
+      - run: |
+          echo ${{ vars.DATA }}
