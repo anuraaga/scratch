@@ -13,3 +13,5 @@ jobs:
 
     steps:
       - run: gh -R anuraaga/scratch workflow run _comment.yaml -r prod
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
