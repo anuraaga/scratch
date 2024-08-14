@@ -14,4 +14,4 @@ jobs:
       - run: |
           echo ${{ vars.DATA }}
           echo ${{ github.event.sender.login }}
-          echo ${{ toJson(github) }}
+          echo "${{ toJson(github) }}"
