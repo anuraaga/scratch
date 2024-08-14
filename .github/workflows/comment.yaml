@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: gh -R anuraaga/scratch workflow run _comment.yaml -r prod
+      - run: gh -R anuraaga/scratch workflow run _comment.yaml -r prod -F issue=10
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

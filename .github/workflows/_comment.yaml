@@ -1,6 +1,11 @@
 name: Dispatch
 on:
   workflow_dispatch:
+    inputs:
+      issue:
+        description: "Issue number to update after apply"
+        required: true
+        type: number
 
 jobs:
   apply:
@@ -14,4 +19,5 @@ jobs:
       - run: |
           echo ${{ vars.DATA }}
           echo ${{ github.event.sender.login }}
+          echo ${{ inputs.issue }}
           echo "${{ toJson(github) }}"
